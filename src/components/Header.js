@@ -14,7 +14,7 @@ const Header = () => {
 
     const getSearchResult = async () => {
         try {
-            const response = await axios.get(`/list_movies.json?query_term=${search}`)
+            const response = await axios.get(`https://yts.mx/api/v2/list_movies.json?query_term=${search}`)
             if (response && !loaded) {
                 const { data } = await response.data
                 setResult(data.movies)

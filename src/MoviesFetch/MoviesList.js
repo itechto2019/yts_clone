@@ -15,7 +15,7 @@ const MoviesList = () => {
     }, [])
     const getMoviesList = async () => {
         try {
-            const response = await axiosFetch.get(`/list_movies.json?limit=50&page=${page}`)
+            const response = await axiosFetch.get(`https://yts.mx/api/v2/list_movies.json?limit=50&page=${page}`)
             if (response && !loaded) {
                 const { data } = await response.data
                 setMoviesList(data.movies)

@@ -16,7 +16,7 @@ const Movie = () => {
     }, [id, img])
     const getMovie = async () => {
         try {
-            const response = await axios.get(`/movie_details.json?movie_id=${id}&with_cast=true&with_images=true`)
+            const response = await axios.get(`https://yts.mx/api/v2/movie_details.json?movie_id=${id}&with_cast=true&with_images=true`)
             if (response) {
                 const { data } = await response.data
                 setMovie(data.movie)

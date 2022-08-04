@@ -21,7 +21,7 @@ const BrowseMovies = () => {
     }, [loaded])
     const getMoviesList = async () => {
         try {
-            const response = await axiosFetch.get(`/list_movies.json?limit=20&page=${page}&quality=${quality}&genre=${genre}&minimum_rating=${rating}&query_term=${year}&sort_by=${order}&query_term=${language}`)
+            const response = await axiosFetch.get(`https://yts.mx/api/v2/list_movies.json?limit=20&page=${page}&quality=${quality}&genre=${genre}&minimum_rating=${rating}&query_term=${year}&sort_by=${order}&query_term=${language}`)
             if (response && !loaded) {
                 const { data } = await response.data
                 setPage(data.page_number)

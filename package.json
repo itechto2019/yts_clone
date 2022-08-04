@@ -1,7 +1,6 @@
 {
   "name": "yts-clone",
   "version": "0.1.0",
-  "proxy": "https://yts.mx/api/v2",
   "private": true,
   "dependencies": {
     "@heroicons/react": "^1.0.6",
